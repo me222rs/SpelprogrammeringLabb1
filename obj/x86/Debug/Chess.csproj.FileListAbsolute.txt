@@ -1,0 +1,52 @@
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\Chess.exe
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\Chess.pdb
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\MonoGame.Framework.dll
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.MediaFoundation.dll
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.dll
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.XAudio2.dll
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.Direct3D11.dll
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.DXGI.dll
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.Direct2D1.dll
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\Lidgren.Network.dll
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.XInput.dll
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.RawInput.dll
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.Direct3D9.dll
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.MediaFoundation.xml
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.xml
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.XAudio2.xml
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.Direct3D11.xml
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.DXGI.xml
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.Direct2D1.xml
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.XInput.xml
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.RawInput.xml
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\SharpDX.Direct3D9.xml
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\obj\x86\Debug\Chess.csprojResolveAssemblyReference.cache
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\obj\x86\Debug\Chess.exe
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\obj\x86\Debug\Chess.pdb
+c:\users\mikael\documents\visual studio 2012\Projects\Chess\bin\Windows\Debug\Content\Bitmap1.bmp
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\obj\x86\Debug\Chess.exe
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\obj\x86\Debug\Chess.pdb
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\Content\Bitmap1.bmp
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\Chess.exe
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\Chess.pdb
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\MonoGame.Framework.dll
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.dll
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.XAudio2.dll
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.Direct3D11.dll
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.DXGI.dll
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.Direct2D1.dll
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\Lidgren.Network.dll
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.XInput.dll
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.RawInput.dll
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.Direct3D9.dll
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.xml
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.XAudio2.xml
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.Direct3D11.xml
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.DXGI.xml
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.Direct2D1.xml
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.XInput.xml
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.RawInput.xml
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.Direct3D9.xml
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\obj\x86\Debug\Chess.csprojResolveAssemblyReference.cache
