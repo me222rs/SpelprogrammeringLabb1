@@ -26,7 +26,7 @@ namespace Chess.Content.View
             windowHeight = graphicsDevice.Viewport.Height;
             spriteBatch = new SpriteBatch(graphicsDevice);
  
-            ballTexture = content.Load<Texture2D>("Bitmap1");
+            ballTexture = content.Load<Texture2D>("Ball");
  
         }
 
@@ -36,7 +36,7 @@ namespace Chess.Content.View
 
             int vx = (int)(ballSimulation.getXPosition() * windowWidth);
             int vy = (int)(ballSimulation.getYPosition() * windowHeight);
-            Rectangle destrect = new Rectangle(vx-0, vy-0, 30, 30);
+            Rectangle destrect = new Rectangle(vx-50, vy-50, 100, 100);
             
             spriteBatch.Begin();
             spriteBatch.Draw(ballTexture, destrect, Color.White);

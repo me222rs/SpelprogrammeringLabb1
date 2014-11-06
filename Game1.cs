@@ -21,8 +21,10 @@ namespace Chess
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         BallView ballView;
+        
         //Ball ball = new Ball();
         BallSimulation ballSimulation = new BallSimulation();
+        Texture2D backgroundTexture;
         public Game1()
             : base()
         {
@@ -57,9 +59,11 @@ namespace Chess
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
+            
+            backgroundTexture = Content.Load<Texture2D>("Shore.jpg");
             spriteBatch = new SpriteBatch(GraphicsDevice);
             ballView = new BallView(GraphicsDevice, Content);
-
+           
             //var size = GraphicsDevice.Viewport.Bounds;
 
             //Camera camera = new Camera();
@@ -102,9 +106,17 @@ namespace Chess
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            
+            spriteBatch.Begin();
+            // Draw background image
+            spriteBatch.Draw(backgroundTexture,
+                new Rectangle(0, 0, Window.ClientBounds.Width,
+                Window.ClientBounds.Height), null,
+                Color.White, 0, Vector2.Zero,
+                SpriteEffects.None, 0);
+            spriteBatch.End();
             // TODO: Add your drawing code here
             ballView.DrawBall(ballSimulation);
+            
     
             
             base.Draw(gameTime);

@@ -50,3 +50,5 @@ C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpD
 C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.RawInput.xml
 C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpDX.Direct3D9.xml
 C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\obj\x86\Debug\Chess.csprojResolveAssemblyReference.cache
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\Content\Ball.png
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\Content\Shore.jpg

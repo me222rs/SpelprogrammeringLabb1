@@ -25,25 +25,27 @@ namespace Chess.Content.Model
             ball.x += elapsedTime * ball.speedX;
             ball.y += elapsedTime * ball.speedY;
 
+
+            //Följande metoder gör så att bollen studsar mot väggarna
             if (ball.x > 1.0f)
             {
-                ball.speedX = -1.0f;
+                ball.speedX = ball.speedX * -1.0f;
             }
 
             if (ball.y > 1.0f)
             {
-                ball.speedY = -1.0f;
+                ball.speedY = ball.speedY * -1.0f;
             }
 
 
             if (ball.x < 0.0f)
             {
-                ball.speedX = 1.0f;
+                ball.speedX = ball.speedX * -1.0f;
             }
 
             if (ball.y < 0.0f)
             {
-                ball.speedY = 1.0f;
+                ball.speedY = ball.speedY * -1.0f;
             }
 
 
