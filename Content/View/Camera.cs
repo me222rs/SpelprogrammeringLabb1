@@ -16,7 +16,7 @@ namespace Chess.Content.View
         private static int frame = 100;
 
 
-        Camera(int levelWidth, int levelHeight)
+        public Camera(int levelWidth, int levelHeight)
         {
             this.levelWidth = levelWidth;
             this.levelHeight = levelHeight;

@@ -106,14 +106,8 @@ namespace Chess
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            spriteBatch.Begin();
-            // Draw background image
-            spriteBatch.Draw(backgroundTexture,
-                new Rectangle(0, 0, Window.ClientBounds.Width,
-                Window.ClientBounds.Height), null,
-                Color.White, 0, Vector2.Zero,
-                SpriteEffects.None, 0);
-            spriteBatch.End();
+            ballView.DrawLevel(backgroundTexture, GraphicsDevice);
+            
             // TODO: Add your drawing code here
             ballView.DrawBall(ballSimulation);
             

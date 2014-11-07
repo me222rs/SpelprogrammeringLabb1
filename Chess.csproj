@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Content\Model\Ball.cs" />
+    <Compile Include="Content\Model\Ball2.cs" />
     <Compile Include="Content\Model\BallSimulation.cs" />
     <Compile Include="Content\View\BallView.cs" />
     <Compile Include="Content\View\Camera.cs" />

@@ -9,14 +9,9 @@ namespace Chess.Content.Model
     //Ska innehålla förflyttning och kollision
     class BallSimulation
     {
-        //public void Update(float timeElapsedInSeconds) {
-        //    Ball ball = new Ball();
-        //    //CheckIfCollision();
-
-        //}
 
         Ball ball = new Ball();
-
+        
         
         internal void Update(GameTime gameTime)
         {
@@ -25,27 +20,33 @@ namespace Chess.Content.Model
             ball.x += elapsedTime * ball.speedX;
             ball.y += elapsedTime * ball.speedY;
 
+         
+
 
             //Följande metoder gör så att bollen studsar mot väggarna
-            if (ball.x > 1.0f)
+            if (ball.x > 0.9f)
             {
                 ball.speedX = ball.speedX * -1.0f;
+                
             }
 
-            if (ball.y > 1.0f)
+            if (ball.y > 0.9f)
             {
                 ball.speedY = ball.speedY * -1.0f;
+                
             }
 
 
-            if (ball.x < 0.0f)
+            if (ball.x < 0.1f)
             {
                 ball.speedX = ball.speedX * -1.0f;
+               
             }
 
-            if (ball.y < 0.0f)
+            if (ball.y < 0.1f)
             {
                 ball.speedY = ball.speedY * -1.0f;
+                
             }
 
 
@@ -62,5 +63,6 @@ namespace Chess.Content.Model
         {
             return ball.y;
         }
+
     }
 }
