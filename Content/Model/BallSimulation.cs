@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Chess.Content.View;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Chess.Content.Model
     {
 
         Ball ball = new Ball();
-        
+        //Camera camera;
         
         internal void Update(GameTime gameTime)
         {
@@ -19,8 +20,8 @@ namespace Chess.Content.Model
             float elapsedTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
             ball.x += elapsedTime * ball.speedX;
             ball.y += elapsedTime * ball.speedY;
-
-         
+           
+            
 
 
             //Följande metoder gör så att bollen studsar mot väggarna

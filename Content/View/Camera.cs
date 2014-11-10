@@ -23,7 +23,7 @@ namespace Chess.Content.View
         }
 
         //Metod som sköter skalningen
-        void setDimensions(int width, int height)
+        public void setDimensions(int width, int height)
         {
             this.width = width;
             this.height = height;
@@ -36,6 +36,11 @@ namespace Chess.Content.View
             {
                 scale = scaleY;
             }
+        }
+
+        public void SetFrame(int size)
+        {
+            frame = size;
         }
 
         public float getScale()
@@ -52,10 +57,10 @@ namespace Chess.Content.View
             return y * scale + frame;
         }
 
-        public float toModelX(float viewPos)
-        {
-            return (viewPos - frame) / scale;
-        }
+        //public float toModelX(float viewPos)
+        //{
+        //    return (viewPos - frame) / scale;
+        //}
 
 
 

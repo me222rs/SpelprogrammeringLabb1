@@ -34,7 +34,7 @@ namespace Chess
             //Hårdkodad storlek på skärmen, ändra här för att ändra storlek
 
             // Storlekar på boll och ram skalar om utan problem, men går man över 720*720 så kommer det inte bli lika snyggt pga. att bilden inte är så stor
-            graphics.PreferredBackBufferWidth = 256;
+            graphics.PreferredBackBufferWidth = 512;
             graphics.PreferredBackBufferHeight = 256;
 
             

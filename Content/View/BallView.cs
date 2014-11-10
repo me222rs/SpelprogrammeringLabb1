@@ -22,6 +22,7 @@ namespace Chess.Content.View
         private int windowHeight;
         private int windowWidth;
         private Camera camera;
+        GraphicsDeviceManager graphics;
 
         //Metod som läser in texturer som tillhör bollen
         public BallView(GraphicsDevice graphicsDevice, ContentManager content)
@@ -43,13 +44,29 @@ namespace Chess.Content.View
             //    backgroundTexture.Width / 2,
             //    backgroundTexture.Height / 2);
 
+
             spriteBatch.Begin();
             // Ritar ut bakgrundsbilden
+            int scale;
+            if (windowHeight > windowWidth)
+            {
+                scale = windowWidth;
+            }
+            else
+            {
+                scale = windowHeight;
+            }
+
+            camera.SetFrame(scale);
+
             spriteBatch.Draw(backgroundTexture,
                 new Rectangle(0, 0,
                 windowWidth, windowHeight), null,
                 Color.White, 0, Vector2.Zero,
                 SpriteEffects.None, 0);
+
+
+            //camera.setDimensions(rectangleToDraw.Width, rectangleToDraw.Height);
 
             //Hittade en tutorial för att rita ut en ram här: http://bluelinegamestudios.com/posts/drawing-a-hollow-rectangle-border-in-xna-4-0/
             
