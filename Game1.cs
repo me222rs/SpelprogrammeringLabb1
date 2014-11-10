@@ -21,6 +21,7 @@ namespace Chess
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         BallView ballView;
+        Texture2D pixel;
         
         //Ball ball = new Ball();
         BallSimulation ballSimulation = new BallSimulation();
@@ -30,10 +31,11 @@ namespace Chess
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            //Hårdkodad storlek på skärmen
+            //Hårdkodad storlek på skärmen, ändra här för att ändra storlek
 
-            graphics.PreferredBackBufferWidth = 512;
-            graphics.PreferredBackBufferHeight = 512;
+            // Storlekar på boll och ram skalar om utan problem, men går man över 720*720 så kommer det inte bli lika snyggt pga. att bilden inte är så stor
+            graphics.PreferredBackBufferWidth = 256;
+            graphics.PreferredBackBufferHeight = 256;
 
             
         }
@@ -59,7 +61,9 @@ namespace Chess
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            
+            pixel = new Texture2D(GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
+            pixel.SetData(new[] { Color.White });
+
             backgroundTexture = Content.Load<Texture2D>("Shore.jpg");
             spriteBatch = new SpriteBatch(GraphicsDevice);
             ballView = new BallView(GraphicsDevice, Content);
@@ -105,9 +109,15 @@ namespace Chess
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-            ballView.DrawLevel(backgroundTexture, GraphicsDevice);
-            
+            //GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            // Create any rectangle you want. Here we'll use the TitleSafeArea for fun.
+            Rectangle titleSafeRectangle = GraphicsDevice.Viewport.TitleSafeArea;
+
+
+            int borderSize = GraphicsDevice.Viewport.Width / 10;
+            //Ritar ut bakgrundsbild och en ram omkring den
+            ballView.DrawLevel(backgroundTexture, titleSafeRectangle, borderSize, Color.Black, pixel);
             // TODO: Add your drawing code here
             ballView.DrawBall(ballSimulation);
             

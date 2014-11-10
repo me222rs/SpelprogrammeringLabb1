@@ -24,26 +24,26 @@ namespace Chess.Content.Model
 
 
             //Följande metoder gör så att bollen studsar mot väggarna
-            if (ball.x > 0.9f)
+            if (ball.x > 1.0f - ball.diameter * 2)
             {
                 ball.speedX = ball.speedX * -1.0f;
                 
             }
 
-            if (ball.y > 0.9f)
+            if (ball.y > 1.0f - ball.diameter * 2)
             {
                 ball.speedY = ball.speedY * -1.0f;
                 
             }
 
 
-            if (ball.x < 0.1f)
+            if (ball.x < 0.0f + ball.diameter * 2)
             {
                 ball.speedX = ball.speedX * -1.0f;
                
             }
 
-            if (ball.y < 0.1f)
+            if (ball.y < 0.0f + ball.diameter * 2)
             {
                 ball.speedY = ball.speedY * -1.0f;
                 

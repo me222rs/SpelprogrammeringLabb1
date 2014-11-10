@@ -13,13 +13,13 @@ namespace Chess.Content.Model
         public float centerY = 4;
 
         //Bollens hastighet i x led
-        public float speedX = 0.4f;
-        public float speedY = 0.3f;
+        public float speedX = 0.1f;
+        public float speedY = 0.2f;
 
         //Dessa bestämmer vart bollen ska börja
         public float x = 0.5f;
         public float y = 0.5f;
-        float radius = 0.1f;
+        public float diameter = 0.1f;
 
 
 
