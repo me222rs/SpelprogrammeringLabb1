@@ -23,14 +23,15 @@ namespace Chess.Content.View
         private int windowWidth;
         private Camera camera;
         GraphicsDeviceManager graphics;
-
+        
         //Metod som läser in texturer som tillhör bollen
-        public BallView(GraphicsDevice graphicsDevice, ContentManager content)
+        public BallView(GraphicsDevice graphicsDevice, ContentManager content, int frame)
         {
             windowWidth = graphicsDevice.Viewport.Width;
             windowHeight = graphicsDevice.Viewport.Height;
 
-            camera = new Camera(windowWidth, windowHeight);
+            camera = new Camera(frame);
+            camera.setDimensions(windowWidth, windowHeight);
             spriteBatch = new SpriteBatch(graphicsDevice);
  
             ballTexture = content.Load<Texture2D>("Ball");
@@ -47,23 +48,33 @@ namespace Chess.Content.View
 
             spriteBatch.Begin();
             // Ritar ut bakgrundsbilden
-            int scale;
-            if (windowHeight > windowWidth)
-            {
-                scale = windowWidth;
-            }
-            else
-            {
-                scale = windowHeight;
-            }
+            //int scale;
+            //if (windowHeight > windowWidth)
+            //{
+            //    scale = windowWidth;
+            //}
+            //else
+            //{
+            //    scale = windowHeight;
+            //}
 
-            camera.SetFrame(scale);
-
+            //camera.SetFrame(scale);
+            
             spriteBatch.Draw(backgroundTexture,
                 new Rectangle(0, 0,
                 windowWidth, windowHeight), null,
                 Color.White, 0, Vector2.Zero,
                 SpriteEffects.None, 0);
+
+            int frameY = 0;
+            int frameX = 0;
+
+            if(rectangleToDraw.Height > rectangleToDraw.Width){
+                frameX = rectangleToDraw.Height - rectangleToDraw.Width;
+            }
+            if (rectangleToDraw.Width > rectangleToDraw.Height) {
+                frameY = rectangleToDraw.Width - rectangleToDraw.Height;
+            }
 
 
             //camera.setDimensions(rectangleToDraw.Width, rectangleToDraw.Height);
@@ -77,15 +88,15 @@ namespace Chess.Content.View
             spriteBatch.Draw(pixel, new Rectangle(rectangleToDraw.X, rectangleToDraw.Y, thicknessOfBorder, rectangleToDraw.Height), borderColor);
 
             // Rita högra linjen
-            spriteBatch.Draw(pixel, new Rectangle((rectangleToDraw.X + rectangleToDraw.Width - thicknessOfBorder),
+            spriteBatch.Draw(pixel, new Rectangle((rectangleToDraw.X + rectangleToDraw.Width - thicknessOfBorder - frameY),
                                             rectangleToDraw.Y,
-                                            thicknessOfBorder,
+                                            thicknessOfBorder + frameY,
                                             rectangleToDraw.Height), borderColor);
             // Rita botten linjen
             spriteBatch.Draw(pixel, new Rectangle(rectangleToDraw.X,
-                                            rectangleToDraw.Y + rectangleToDraw.Height - thicknessOfBorder,
+                                            rectangleToDraw.Y + rectangleToDraw.Height - thicknessOfBorder - frameX,
                                             rectangleToDraw.Width,
-                                            thicknessOfBorder), borderColor);
+                                            thicknessOfBorder + frameX), borderColor);
 
 
 
@@ -96,10 +107,14 @@ namespace Chess.Content.View
 
         //Metod som ritar ut bollen
         internal void DrawBall(BallSimulation ballSimulation) {
-            int size = windowWidth / 10;
-            int vx = (int)(ballSimulation.getXPosition() * windowWidth);
-            int vy = (int)(ballSimulation.getYPosition() * windowHeight);
-            Rectangle destrect = new Rectangle(vx - size, vy - size, size * 2, size * 2);
+            //int size = windowWidth / 10;
+
+            Ball ball = new Ball();
+            int vx = (int)(ballSimulation.getXPosition() * camera.getScale() + camera.GetFrame());
+            int vy = (int)(ballSimulation.getYPosition() * camera.getScale() + camera.GetFrame());
+
+            int size = (int)(ball.diameter * camera.getScale());
+            Rectangle destrect = new Rectangle(vx - size/2, vy - size/2, size, size);
             
             spriteBatch.Begin();
             spriteBatch.Draw(ballTexture, destrect, Color.White);

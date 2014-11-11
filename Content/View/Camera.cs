@@ -13,13 +13,14 @@ namespace Chess.Content.View
         private float scale;
         private int levelWidth;
         private int levelHeight;
-        private static int frame = 100;
+        private int frame;
 
 
-        public Camera(int levelWidth, int levelHeight)
+        public Camera(int frame)
         {
-            this.levelWidth = levelWidth;
-            this.levelHeight = levelHeight;
+            this.frame = frame;
+            //this.levelWidth = levelWidth;
+            //this.levelHeight = levelHeight;
         }
 
         //Metod som sköter skalningen
@@ -28,8 +29,8 @@ namespace Chess.Content.View
             this.width = width;
             this.height = height;
 
-            int scaleX = (width - frame * 2) / levelWidth;
-            int scaleY = (height - frame * 2) / levelHeight;
+            int scaleX = (width - frame * 2);
+            int scaleY = (height - frame * 2);
 
             scale = scaleX;
             if (scaleY < scaleX)
@@ -38,24 +39,28 @@ namespace Chess.Content.View
             }
         }
 
-        public void SetFrame(int size)
-        {
-            frame = size;
+        //public void SetFrame(int size)
+        //{
+        //    frame = size;
+        //}
+
+        public int GetFrame() {
+            return frame;
         }
 
         public float getScale()
         {
             return scale;
         }
-        public float toViewX(float x)
-        {
-            return x * scale + frame;
-        }
+        //public float toViewX(float x)
+        //{
+        //    return x * scale + frame;
+        //}
 
-        public float toViewY(float y)
-        {
-            return y * scale + frame;
-        }
+        //public float toViewY(float y)
+        //{
+        //    return y * scale + frame;
+        //}
 
         //public float toModelX(float viewPos)
         //{

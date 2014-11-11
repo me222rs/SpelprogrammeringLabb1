@@ -17,8 +17,8 @@ namespace Chess.Content.Model
         public float speedY = 0.2f;
 
         //Dessa bestämmer vart bollen ska börja
-        public float x = 0.7f;
-        public float y = 0.3f;
+        public float x = 0.5f;
+        public float y = 0.5f;
         public float diameter = 0.1f;
 
 

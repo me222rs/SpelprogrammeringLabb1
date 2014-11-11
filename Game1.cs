@@ -22,6 +22,7 @@ namespace Chess
         SpriteBatch spriteBatch;
         BallView ballView;
         Texture2D pixel;
+        private int frame = 20;
         
         //Ball ball = new Ball();
         BallSimulation ballSimulation = new BallSimulation();
@@ -35,7 +36,7 @@ namespace Chess
 
             // Storlekar på boll och ram skalar om utan problem, men går man över 720*720 så kommer det inte bli lika snyggt pga. att bilden inte är så stor
             graphics.PreferredBackBufferWidth = 512;
-            graphics.PreferredBackBufferHeight = 256;
+            graphics.PreferredBackBufferHeight = 400;
 
             
         }
@@ -66,7 +67,7 @@ namespace Chess
 
             backgroundTexture = Content.Load<Texture2D>("Shore.jpg");
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            ballView = new BallView(GraphicsDevice, Content);
+            ballView = new BallView(GraphicsDevice, Content, frame);
            
             //var size = GraphicsDevice.Viewport.Bounds;
 
@@ -115,9 +116,9 @@ namespace Chess
             Rectangle titleSafeRectangle = GraphicsDevice.Viewport.TitleSafeArea;
 
 
-            int borderSize = GraphicsDevice.Viewport.Width / 10;
+            //int borderSize = GraphicsDevice.Viewport.Width / 10;
             //Ritar ut bakgrundsbild och en ram omkring den
-            ballView.DrawLevel(backgroundTexture, titleSafeRectangle, borderSize, Color.Black, pixel);
+            ballView.DrawLevel(backgroundTexture, titleSafeRectangle, frame, Color.Black, pixel);
             // TODO: Add your drawing code here
             ballView.DrawBall(ballSimulation);
             
