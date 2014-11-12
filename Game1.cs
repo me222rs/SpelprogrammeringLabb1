@@ -22,9 +22,9 @@ namespace Chess
         SpriteBatch spriteBatch;
         BallView ballView;
         Texture2D pixel;
-        private int frame = 20;
+        //Ramens bredd är enkel att ändra ifall man vill
+        private int frame = 10;
         
-        //Ball ball = new Ball();
         BallSimulation ballSimulation = new BallSimulation();
         Texture2D backgroundTexture;
         public Game1()
@@ -36,7 +36,7 @@ namespace Chess
 
             // Storlekar på boll och ram skalar om utan problem, men går man över 720*720 så kommer det inte bli lika snyggt pga. att bilden inte är så stor
             graphics.PreferredBackBufferWidth = 512;
-            graphics.PreferredBackBufferHeight = 400;
+            graphics.PreferredBackBufferHeight = 512;
 
             
         }
@@ -61,22 +61,16 @@ namespace Chess
         /// </summary>
         protected override void LoadContent()
         {
+            //Källa för de två kodraderna under: http://bluelinegamestudios.com/posts/drawing-a-hollow-rectangle-border-in-xna-4-0/
             // Create a new SpriteBatch, which can be used to draw textures.
             pixel = new Texture2D(GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
             pixel.SetData(new[] { Color.White });
 
-            backgroundTexture = Content.Load<Texture2D>("Shore.jpg");
+            //Här kan man sätta en valfri bakgrundsbild
+            backgroundTexture = Content.Load<Texture2D>("FindingNemo.jpg");
             spriteBatch = new SpriteBatch(GraphicsDevice);
             ballView = new BallView(GraphicsDevice, Content, frame);
            
-            //var size = GraphicsDevice.Viewport.Bounds;
-
-            //Camera camera = new Camera();
-            //camera.Scale(512,512);
-            //float scale = camera.getScale();
-
-
-            // TODO: use this.Content to load your game content here
         }
 
         /// <summary>
@@ -110,16 +104,10 @@ namespace Chess
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            //GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            // Create any rectangle you want. Here we'll use the TitleSafeArea for fun.
-            Rectangle titleSafeRectangle = GraphicsDevice.Viewport.TitleSafeArea;
-
-
-            //int borderSize = GraphicsDevice.Viewport.Width / 10;
-            //Ritar ut bakgrundsbild och en ram omkring den
+            Rectangle titleSafeRectangle = GraphicsDevice.Viewport.TitleSafeArea;       
+            //Ritar ut bakgrundsbild och en ram omkring den innan jag ritar ut bollen
             ballView.DrawLevel(backgroundTexture, titleSafeRectangle, frame, Color.Black, pixel);
-            // TODO: Add your drawing code here
+            // Här ritas bollen ut ovanpå bakgrunden
             ballView.DrawBall(ballSimulation);
             
     

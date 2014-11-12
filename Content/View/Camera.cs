@@ -52,20 +52,6 @@ namespace Chess.Content.View
         {
             return scale;
         }
-        //public float toViewX(float x)
-        //{
-        //    return x * scale + frame;
-        //}
-
-        //public float toViewY(float y)
-        //{
-        //    return y * scale + frame;
-        //}
-
-        //public float toModelX(float viewPos)
-        //{
-        //    return (viewPos - frame) / scale;
-        //}
 
 
 

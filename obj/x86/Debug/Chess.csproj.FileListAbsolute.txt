@@ -52,3 +52,7 @@ C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\SharpD
 C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\obj\x86\Debug\Chess.csprojResolveAssemblyReference.cache
 C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\Content\Ball.png
 C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\Content\Shore.jpg
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\Content\Blowfish.png
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\Content\maxresdefault.jpg
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\Content\FindingNemo.jpg
+C:\Users\Mikael\Documents\GitHub\SpelprogrammeringLabb1\bin\Windows\Debug\Content\Blowfish2.png

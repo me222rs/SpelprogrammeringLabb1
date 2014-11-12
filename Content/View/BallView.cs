@@ -18,48 +18,31 @@ namespace Chess.Content.View
        
         private SpriteBatch spriteBatch;
         private Texture2D ballTexture;
-        private int frameOffset = 50;
         private int windowHeight;
         private int windowWidth;
         private Camera camera;
-        GraphicsDeviceManager graphics;
         
         //Metod som läser in texturer som tillhör bollen
         public BallView(GraphicsDevice graphicsDevice, ContentManager content, int frame)
         {
+            //Hämtar ut bredd och höjd på fönstret
             windowWidth = graphicsDevice.Viewport.Width;
             windowHeight = graphicsDevice.Viewport.Height;
 
+            
             camera = new Camera(frame);
             camera.setDimensions(windowWidth, windowHeight);
             spriteBatch = new SpriteBatch(graphicsDevice);
  
-            ballTexture = content.Load<Texture2D>("Ball");
+            ballTexture = content.Load<Texture2D>("Blowfish2");
  
         }
         //Metod som ritar ut banan
         internal void DrawLevel(Texture2D backgroundTexture, Rectangle rectangleToDraw, int thicknessOfBorder, Color borderColor, Texture2D pixel) {
-           
-            //var screenCenter = new Vector2(windowWidth / 2, windowHeight / 2);
-            //var textureCenter = new Vector2(
-            //    backgroundTexture.Width / 2,
-            //    backgroundTexture.Height / 2);
 
 
             spriteBatch.Begin();
-            // Ritar ut bakgrundsbilden
-            //int scale;
-            //if (windowHeight > windowWidth)
-            //{
-            //    scale = windowWidth;
-            //}
-            //else
-            //{
-            //    scale = windowHeight;
-            //}
-
-            //camera.SetFrame(scale);
-            
+            // Ritar ut bakgrundsbilden           
             spriteBatch.Draw(backgroundTexture,
                 new Rectangle(0, 0,
                 windowWidth, windowHeight), null,
@@ -80,6 +63,7 @@ namespace Chess.Content.View
             //camera.setDimensions(rectangleToDraw.Width, rectangleToDraw.Height);
 
             //Hittade en tutorial för att rita ut en ram här: http://bluelinegamestudios.com/posts/drawing-a-hollow-rectangle-border-in-xna-4-0/
+            //Använde mig utav koden i länken ovan och lade till lite så att den fungerade som jag ville.
             
             // Rita översta linjen
             spriteBatch.Draw(pixel, new Rectangle(rectangleToDraw.X, rectangleToDraw.Y, rectangleToDraw.Width, thicknessOfBorder), borderColor);
@@ -114,16 +98,14 @@ namespace Chess.Content.View
             int vy = (int)(ballSimulation.getYPosition() * camera.getScale() + camera.GetFrame());
 
             int size = (int)(ball.diameter * camera.getScale());
+
+
             Rectangle destrect = new Rectangle(vx - size/2, vy - size/2, size, size);
-            
+
+            Vector2 origin = new Vector2(destrect.Width / 2, destrect.Height / 2);
             spriteBatch.Begin();
             spriteBatch.Draw(ballTexture, destrect, Color.White);
             spriteBatch.End();
-
-            //layer1.borderLeft = 0;
-            //layer1.borderRight = 640;
-            //layer1.borderTop = 0;
-            //layer1.borderBottom = 640;
         }
     }
 }
