@@ -21,6 +21,7 @@ namespace Chess.Content.View
         private int windowHeight;
         private int windowWidth;
         private Camera camera;
+        private float rotation = 3.14f / 2.0f;
         
         //Metod som läser in texturer som tillhör bollen
         public BallView(GraphicsDevice graphicsDevice, ContentManager content, int frame)
@@ -101,10 +102,12 @@ namespace Chess.Content.View
 
 
             Rectangle destrect = new Rectangle(vx - size/2, vy - size/2, size, size);
-
-            Vector2 origin = new Vector2(destrect.Width / 2, destrect.Height / 2);
+            Rectangle srcRect = new Rectangle(0,0, ballTexture.Width, ballTexture.Height);
+            
+            Vector2 origin = new Vector2(size/2,size/2);
             spriteBatch.Begin();
             spriteBatch.Draw(ballTexture, destrect, Color.White);
+            //spriteBatch.Draw(ballTexture, destrect, srcRect, Color.White, rotation, origin, SpriteEffects.None, 0);
             spriteBatch.End();
         }
     }
