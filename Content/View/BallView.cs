@@ -100,14 +100,15 @@ namespace Chess.Content.View
 
             int size = (int)(ball.diameter * camera.getScale());
 
-
+            rotation += 0.01f;
             Rectangle destrect = new Rectangle(vx - size/2, vy - size/2, size, size);
             Rectangle srcRect = new Rectangle(0,0, ballTexture.Width, ballTexture.Height);
-            
-            Vector2 origin = new Vector2(size/2,size/2);
+
+            Vector2 origin = new Vector2(187 / 2, 226/2);
             spriteBatch.Begin();
-            spriteBatch.Draw(ballTexture, destrect, Color.White);
+            //spriteBatch.Draw(ballTexture, destrect, Color.White);
             //spriteBatch.Draw(ballTexture, destrect, srcRect, Color.White, rotation, origin, SpriteEffects.None, 0);
+            spriteBatch.Draw(ballTexture, new Vector2(vx, vy), srcRect, Color.White, rotation, origin, new Vector2(size / (float)ballTexture.Width, size / (float)ballTexture.Height), SpriteEffects.None, 0);
             spriteBatch.End();
         }
     }
